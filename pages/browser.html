@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/browser.css" />
+  </head>
+  <body>
+    <h1>I.Przeglądarka</h1>
+    <button id="btn">Random 20 numbers!</button>
+    <div class="column l-25">
+      <h1 class="title green">Even numbers</h1>
+      <div class="even"></div>
+    </div>
+    <div class="column l-75">
+      <h1 class="title red">Odd numbers</h1>
+      <div class="odd"></div>
+    </div>
+    <script>
+      let handleClick = () => {
+        const evenDiv = document.body.querySelector(".even");
+        const oddDiv = document.body.querySelector(".odd");
+        evenDiv.innerHTML = "";
+        oddDiv.innerHTML = "";
+        let randomNums = [];
+        for (let i = 0; i < 20; i++) {
+          let random = Math.floor(Math.random() * 101);
+          randomNums.push(random);
+        }
+        randomNums = randomNums.sort(function (a, b) {
+          return a - b;
+        });
+        let indexes = [0, 0];
+
+        randomNums.forEach((num, index) => {
+          let p = document.createElement("p");
+          p.textContent = num;
+          if (num % 2 == 0) {
+            setTimeout(() => {
+              evenDiv.appendChild(p);
+            }, indexes[0]);
+            indexes[0] += 40;
+          } else {
+            setTimeout(() => {
+              oddDiv.appendChild(p);
+            }, indexes[1]);
+            indexes[1] += 40;
+          }
+        });
+      };
+
+      let button = document.getElementById("btn");
+      button.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

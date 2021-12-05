@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>II.Formularze</title>
+    <link rel="stylesheet" href="../style/forms.css" />
+    <script src="../scripts/forms.js" defer></script>
+  </head>
+  <body>
+    <div id="right">
+      <form id="form">
+        <label for="title">Tytuł książki:</label>
+        <input type="text" id="title" name="title" />
+        <label for="author">Autor książki:</label>
+        <input type="text" id="author" name="author" />
+        <label for="priority">Priorytet przeczytania:</label>
+        <input type="number" id="priority" name="priority" />
+        <label for="category">Lista z kategoriami:</label>
+        <select name="category" id="category">
+          <option value="fantasy" selected="selected">fantasy</option>
+          <option value="crime">crime</option>
+          <option value="horror">horror</option>
+        </select>
+        <!-- <input type="submit" id="btn" value="prześlij" /> -->
+        <button id="btn">prześlij</button>
+      </form>
+      <div class="mistakes"></div>
+    </div>
+    <div id="left">
+      <table>
+        <thead>
+          <th>tytuł</th>
+          <th>autor</th>
+          <th>priorytet przeczytania</th>
+          <th>kategoria</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>

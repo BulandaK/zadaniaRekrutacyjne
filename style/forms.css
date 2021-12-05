@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #5bc0eb;
+}
+#right {
+  width: 50vw;
+  height: 100vh;
+  /* display: flex; */
+}
+
+#left {
+  width: 50vw;
+  height: 100vh;
+}
+
+#form {
+  width: 30vw;
+  height: 60vh;
+  background-color: #c3423f;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  color: #211a1e;
+  box-shadow: 2px 4px 8px #212121;
+}
+label {
+  display: block;
+  font-size: 1.3rem;
+  padding-left: 15px;
+}
+input,
+select {
+  outline: none;
+  width: 80%;
+  height: 8%;
+  font-size: 1.1rem;
+  margin: 10px 0 10px 0;
+  padding: 5px;
+  padding-left: 20px;
+  border-radius: 25px;
+  border: 1px solid #211a1e;
+  appearance: none;
+}
+
+input:focus {
+  background-color: #eeeaea;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#btn {
+  margin-top: 1.5rem;
+  width: 200px;
+  height: 40px;
+  color: #211a1e;
+  text-transform: uppercase;
+  background-color: #fde74c;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.7px;
+  box-shadow: 2px 4px 8px #212121;
+  transition: 0.3s;
+}
+#btn:hover {
+  color: #fde74c;
+  background-color: #211a1e;
+}
+
+.mistakes {
+  width: 30vw;
+  height: 15vh;
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  color: #211a1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 2px 4px 8px #212121;
+  background-color: #fde74c;
+}
+
+.showMistakes {
+  background-color: #fde74c;
+}
+
+table {
+  width: 45vw;
+  height: 80vh;
+
+  position: relative;
+  display: block;
+  overflow-y: scroll;
+  background-color: white;
+  margin: 5vh auto;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 12px 12px 0 0;
+
+  text-align: center;
+  box-shadow: 0 12px 5px rgba(32, 32, 32, 0.3);
+}
+thead {
+  display: block;
+}
+
+th {
+  width: 25%;
+  text-transform: uppercase;
+  color: #fafafa;
+  background-color: #c3423f;
+  padding: 15px;
+}
+tbody {
+  display: block;
+  width: 100%;
+}
+tbody tr {
+  display: block;
+}
+tbody tr td {
+  display: inline-block;
+  width: 25%;
+  height: 5vh;
+  line-height: 5vh;
+}
+tr:nth-child(odd) {
+  background-color: #eeecec;
+}
+
+/* ::-webkit-scrollbar {
+  width: 2em;
+  scrollbar-color: red blue;
+}
+::-webkit-scrollbar-track {
+  background: hsl(120 75% 50% / 1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(120 100% 20% / 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(120, 100%, 10% /1);
+}
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: #c3423f #fde74c;
+  }
+} */
